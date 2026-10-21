@@ -2,51 +2,89 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <!-- Важнейший тег для мобильной адаптивности -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой первый сайт</title>
+    <title>Vasyliev Oleksandr — Web Development</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Шапка сайта -->
+    <!-- Шапка -->
     <header class="header">
         <div class="container">
-            <div class="logo">МойСайт</div>
+            <div class="logo">Vasyliev Oleksandr</div>
             <nav class="nav">
-                <a href="#about">Обо мне</a>
-                <a href="#projects">Проекты</a>
-                <a href="#contacts">Контакты</a>
+                <a href="#services" data-i18n="nav_services">Услуги</a>
+                <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
+                <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
             </nav>
+
+            <!-- Переключатель языков -->
+            <div class="lang-select">
+                <button class="lang-btn active" onclick="changeLanguage('ru')">RU</button>
+                <button class="lang-btn" onclick="changeLanguage('ua')">UA</button>
+                <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                <button class="lang-btn" onclick="changeLanguage('lt')">LT</button>
+            </div>
         </div>
     </header>
 
-    <!-- Главный баннер -->
+    <!-- Баннер (без аватарки) -->
     <section class="hero">
-        <div class="container">
-            <h1>Привет! Я создаю свой веб-сайт</h1>
-            <p>Этот сайт отлично выглядит как на ноутбуке, так и на смартфоне.</p>
-            <button id="btn">Нажми меня</button>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 data-i18n="hero_title">Создание и настройка веб-сайтов</h1>
+                <p data-i18n="hero_subtitle">Адаптивные сайты под компьютеры и смартфоны от Vasyliev Oleksandr.</p>
+                <a href="#contacts" class="btn" data-i18n="hero_btn">Заказать проект</a>
+            </div>
         </div>
     </section>
 
-    <!-- Блок с карточками -->
-    <section class="projects" id="projects">
+    <!-- Услуги с картинками -->
+    <section class="services" id="services">
         <div class="container">
-            <h2>Мои блоки</h2>
+            <h2 data-i18n="services_title">Услуги и стоимость</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Блок 1</h3>
-                    <p>Описание первого элемента.</p>
+                    <img src="card1.jpg" alt="Landing" class="card-img">
+                    <h3 data-i18n="card1_title">Сайт-визитка / Landing Page</h3>
+                    <p class="price" data-i18n="card1_price">от €150</p>
+                    <p data-i18n="card1_desc">Современный одностраничный сайт с информацией о ваших услугах и контактами.</p>
                 </div>
                 <div class="card">
-                    <h3>Блок 2</h3>
-                    <p>Описание второго элемента.</p>
+                    <img src="card2.jpg" alt="Layout" class="card-img">
+                    <h3 data-i18n="card2_title">Адаптивная верстка</h3>
+                    <p class="price" data-i18n="card2_price">от €80</p>
+                    <p data-i18n="card2_desc">Перенос макета в код и полная оптимизация под мобильные устройства.</p>
                 </div>
                 <div class="card">
-                    <h3>Блок 3</h3>
-                    <p>Описание третьего элемента.</p>
+                    <img src="card3.jpg" alt="Hosting" class="card-img">
+                    <h3 data-i18n="card3_title">Публикация и хостинг</h3>
+                    <p class="price" data-i18n="card3_price">от €40</p>
+                    <p data-i18n="card3_desc">Размещение проекта на GitHub Pages/Vercel и настройка домена.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 data-i18n="reviews_title">Отзывы клиентов</h2>
+            <div class="empty-reviews">
+                <p data-i18n="reviews_empty">Здесь пока нет отзывов. Вы можете стать первым, кто оставит свой отзыв!</p>
+                <a href="https://t.me/your_telegram" target="_blank" class="btn review-btn" data-i18n="reviews_btn">Оставить отзыв</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 data-i18n="contacts_title">Связаться со мной</h2>
+            <p data-i18n="contacts_desc">Обсудим ваш проект? Напишите мне в удобном мессенджере:</p>
+            <div class="contact-buttons">
+                <a href="https://t.me/your_telegram" target="_blank" class="btn telegram" data-i18n="btn_telegram">Написать в Telegram</a>
+                <a href="mailto:example@email.com" class="btn email" data-i18n="btn_email">Отправить Email</a>
             </div>
         </div>
     </section>
