@@ -1,40 +1,45 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vasyliev Oleksandr — Web Development</title>
+    <title>Payidea — Web Development Studio .LT</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Иконка сайта (Фавикон) -->
+    <link rel="icon" href="avatar.png" type="image/png">
 </head>
 <body>
 
     <!-- Шапка -->
     <header class="header">
         <div class="container">
-            <div class="logo">Vasyliev Oleksandr</div>
+            <div class="logo">Payidea</div>
             <nav class="nav">
-                <a href="#services" data-i18n="nav_services">Услуги</a>
-                <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
-                <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
+                <a href="#services" data-i18n="nav_services">Services</a>
+                <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+                <a href="#contacts" data-i18n="nav_contacts">Contacts</a>
             </nav>
 
             <!-- Переключатель языков -->
             <div class="lang-select">
-                <button class="lang-btn active" onclick="changeLanguage('ru')">RU</button>
+                <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
                 <button class="lang-btn" onclick="changeLanguage('ua')">UA</button>
-                <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
                 <button class="lang-btn" onclick="changeLanguage('lt')">LT</button>
             </div>
         </div>
     </header>
 
-    <!-- Баннер (без аватарки) -->
+    <!-- Баннер с фото и названием -->
     <section class="hero">
         <div class="container hero-content">
+            <div class="hero-avatar">
+                <img src="avatar.png" alt="Payidea Studio" class="profile-img">
+            </div>
             <div class="hero-text">
-                <h1 data-i18n="hero_title">Создание и настройка веб-сайтов</h1>
-                <p data-i18n="hero_subtitle">Адаптивные сайты под компьютеры и смартфоны от Vasyliev Oleksandr.</p>
-                <a href="#contacts" class="btn" data-i18n="hero_btn">Заказать проект</a>
+                <h1 data-i18n="hero_title">Payidea Web Studio</h1>
+                <p data-i18n="hero_subtitle">Modern, responsive, and secure websites by a professional team in Lithuania.</p>
+                <a href="#contacts" class="btn" data-i18n="hero_btn">Order a Project</a>
             </div>
         </div>
     </section>
@@ -42,25 +47,25 @@
     <!-- Услуги с картинками -->
     <section class="services" id="services">
         <div class="container">
-            <h2 data-i18n="services_title">Услуги и стоимость</h2>
+            <h2 data-i18n="services_title">Services & Pricing</h2>
             <div class="grid">
                 <div class="card">
-                    <img src="card1.jpg" alt="Landing" class="card-img">
-                    <h3 data-i18n="card1_title">Сайт-визитка / Landing Page</h3>
-                    <p class="price" data-i18n="card1_price">от €150</p>
-                    <p data-i18n="card1_desc">Современный одностраничный сайт с информацией о ваших услугах и контактами.</p>
+                    <img src="card1.jpg" alt="Landing Page" class="card-img">
+                    <h3 data-i18n="card1_title">Landing Page / Business Card</h3>
+                    <p class="price" data-i18n="card1_price">from €250</p>
+                    <p data-i18n="card1_desc">A modern single-page website to showcase your business, services, and contacts effectively.</p>
                 </div>
                 <div class="card">
-                    <img src="card2.jpg" alt="Layout" class="card-img">
-                    <h3 data-i18n="card2_title">Адаптивная верстка</h3>
-                    <p class="price" data-i18n="card2_price">от €80</p>
-                    <p data-i18n="card2_desc">Перенос макета в код и полная оптимизация под мобильные устройства.</p>
+                    <img src="card2.jpg" alt="Responsive Layout" class="card-img">
+                    <h3 data-i18n="card2_title">Responsive Layout</h3>
+                    <p class="price" data-i18n="card2_price">from €80</p>
+                    <p data-i18n="card2_desc">Converting design layouts into clean code, optimized for all mobile and desktop devices.</p>
                 </div>
                 <div class="card">
-                    <img src="card3.jpg" alt="Hosting" class="card-img">
-                    <h3 data-i18n="card3_title">Публикация и хостинг</h3>
-                    <p class="price" data-i18n="card3_price">от €40</p>
-                    <p data-i18n="card3_desc">Размещение проекта на GitHub Pages/Vercel и настройка домена.</p>
+                    <img src="card3.jpg" alt="Publishing & Hosting" class="card-img">
+                    <h3 data-i18n="card3_title">Publishing & Hosting</h3>
+                    <p class="price" data-i18n="card3_price">from €40</p>
+                    <p data-i18n="card3_desc">Deploying your project to a server, connecting a custom domain, and setting up SSL.</p>
                 </div>
             </div>
         </div>
@@ -69,10 +74,10 @@
     <!-- Отзывы -->
     <section class="reviews" id="reviews">
         <div class="container">
-            <h2 data-i18n="reviews_title">Отзывы клиентов</h2>
+            <h2 data-i18n="reviews_title">Client Reviews</h2>
             <div class="empty-reviews">
-                <p data-i18n="reviews_empty">Здесь пока нет отзывов. Вы можете стать первым, кто оставит свой отзыв!</p>
-                <a href="https://t.me/your_telegram" target="_blank" class="btn review-btn" data-i18n="reviews_btn">Оставить отзыв</a>
+                <p data-i18n="reviews_empty">No reviews yet. Be the first one to share your positive experience after working with us!</p>
+                <a href="https://t.me/sk_alex_ks" target="_blank" class="btn review-btn" data-i18n="reviews_btn">Leave a Review</a>
             </div>
         </div>
     </section>
@@ -80,14 +85,21 @@
     <!-- Контакты -->
     <section class="contacts" id="contacts">
         <div class="container">
-            <h2 data-i18n="contacts_title">Связаться со мной</h2>
-            <p data-i18n="contacts_desc">Обсудим ваш проект? Напишите мне в удобном мессенджере:</p>
+            <h2 data-i18n="contacts_title">Contact Payidea</h2>
+            <p data-i18n="contacts_desc">Ready to start your project? Contact us through any convenient channel:</p>
             <div class="contact-buttons">
-                <a href="https://t.me/your_telegram" target="_blank" class="btn telegram" data-i18n="btn_telegram">Написать в Telegram</a>
-                <a href="mailto:example@email.com" class="btn email" data-i18n="btn_email">Отправить Email</a>
+                <!-- Твои реальные контакты -->
+                <a href="https://t.me/sk_alex_ks" target="_blank" class="btn telegram" data-i18n="btn_telegram">Telegram</a>
+                <a href="mailto:vvalex2004@gmail.com" class="btn email" data-i18n="btn_email">Email</a>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Payidea Web Studio .LT. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
