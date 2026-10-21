@@ -232,3 +232,25 @@ h2 {
         font-size: 28px;
     }
 }
+/* Стили для блока с аватаркой в шапке (hero секции) */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-avatar {
+    margin-bottom: 20px;
+}
+
+/* Размер, форма круга и аккуратная рамка для аватарки */
+.profile-img {
+    width: 120px;         /* Размер аватарки (можешь изменить на 100px или 150px) */
+    height: 120px;        /* Должно быть равно ширине, чтобы получился ровный круг */
+    object-fit: cover;    /* Картинка аккуратно впишется в круг без искажений */
+    border-radius: 50%;   /* Превращает квадрат в идеальный круг */
+    border: 3px solid #00E676; /* Стильная зеленая рамка в цвет бренда */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Легкая тень для объема */
+    background-color: transparent; /* Убирает лишний белый фон */
+}
